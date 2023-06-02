@@ -56,10 +56,16 @@ public class Main_1 {
                 .collect(Collectors.toList());
         }
 
-        private Integer getAmount(List<Book> books) {
+        private Integer getBooksCount(List<Book> books) {
             return books.stream()
                 .map(e -> 1)
                 .reduce(0, (a, b) -> a + b);
+        }
+
+        private Integer getAmount(List<Book> books) {
+            return books.stream()
+                .map(Book::getPrice)
+                .reduce(0, Integer::sum);
         }
     }
 
@@ -77,8 +83,9 @@ public class Main_1 {
 
         BookService bookService = new BookService();
 
-        System.out.println(bookService.getBookNames(List.of(book_1, book_2)));
-        System.out.println(bookService.getBookTags(List.of(book_1, book_2)));
-        System.out.println(bookService.getAmount(List.of(book_1, book_2)));
+        System.out.println("getBookNames() : " + bookService.getBookNames(List.of(book_1, book_2)));
+        System.out.println("getBookTags() : " + bookService.getBookTags(List.of(book_1, book_2)));
+        System.out.println("getBooksCount() : " + bookService.getBooksCount(List.of(book_1, book_2)));
+        System.out.println("getAmount() : " + bookService.getAmount(List.of(book_1, book_2)));
     }
 }
