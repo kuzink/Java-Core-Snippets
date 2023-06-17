@@ -11,6 +11,8 @@ public class Main {
 //        example_7(); //true
 //        example_8(); //false
 
+        Test_1 test_1 = new Test_1();
+
     }
 
     private static void example_1() {
