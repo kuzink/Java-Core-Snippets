@@ -51,3 +51,43 @@ public class Main_2 {
         getSortedLastNames(people);
     }
 }
+
+interface A {
+    void fuck();
+}
+
+interface B {
+    String fuck();
+}
+
+interface Foo extends A {
+
+    public static final int A = 1;
+
+    public abstract void print();
+
+    default void make() {
+        System.out.println("make()");
+        System.out.println(subMake());
+        System.out.println(staticSubMake());
+
+    }
+
+    private String subMake() {
+        return "subMake()";
+    }
+
+
+    static String staticSubMake() {
+        return "staticSubMake()";
+    }
+}
+
+//class ABClass implements A, B {
+//
+//
+//    @Override
+//    public void fuck() {
+//
+//    }
+//}
