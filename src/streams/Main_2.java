@@ -1,3 +1,5 @@
+package streams;
+
 import java.util.*;
 import java.util.stream.*;
 
@@ -83,7 +85,7 @@ interface Foo extends A {
     }
 }
 
-//class ABClass implements A, B {
+//class ABClass implements streams.A, streams.B {
 //
 //
 //    @Override
