@@ -121,6 +121,12 @@ public class Main {
         //Получить Map вида key=name, value=price
         System.out.println("9. getBooksMap() : " + main.getBooksMap(BOOKS));
 
+//        Stream.generate(() -> new Book(111, "111", Collections.emptyList()))
+//            .limit(100000)
+//            .forEach(System.out::println);
+
+
+
     }
 
 
