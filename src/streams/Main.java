@@ -5,6 +5,8 @@ import java.util.stream.*;
 
 public class Main {
 
+    //private static List<Book> bookList = new ArrayList<>();
+
     private static final List<Tag> TAGS = List.of(
         new Tag(1L, "1"),
         new Tag(2L, "2"),
@@ -90,6 +92,15 @@ public class Main {
             .collect(Collectors.toMap(Book::getName, Book::getPrice));
     }
 
+    private int getStackOverflowError(int i) {
+        return getStackOverflowError(i + 1);
+    }
+
+    private void getOutOfMemoryError() {
+        final List<Book> bookList = new ArrayList<>();
+        Stream.generate(() -> bookList.add(new Book(111, "111", Collections.emptyList())))
+                .forEach(System.out::println);
+    }
     
     public static void main(String[] args) {
         Main main = new Main();
@@ -121,11 +132,8 @@ public class Main {
         //Получить Map вида key=name, value=price
         System.out.println("9. getBooksMap() : " + main.getBooksMap(BOOKS));
 
-//        Stream.generate(() -> new Book(111, "111", Collections.emptyList()))
-//            .limit(100000)
-//            .forEach(System.out::println);
-
-
+        main.getOutOfMemoryError();
+        //main.getStackOverflowError(1);
 
     }
 
