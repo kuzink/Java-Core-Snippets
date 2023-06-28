@@ -86,11 +86,11 @@ public class Main {
         //raceConditionExample();
 
         //3. Пример deadlock
-        deadLockExample();
+        //deadLockExample();
 
 
 
-        System.out.println("Main Thread");
+        System.out.println("Имя главного потока: " + Thread.currentThread().getName());
     }
 }
 
