@@ -86,7 +86,7 @@ public class Main {
         //raceConditionExample();
 
         //3. Пример deadlock
-        //deadLockExample();
+        deadLockExample();
 
 
 

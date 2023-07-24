@@ -132,7 +132,7 @@ public class Main {
         //Получить Map вида key=name, value=price
         System.out.println("9. getBooksMap() : " + main.getBooksMap(BOOKS));
 
-        main.getOutOfMemoryError();
+        //main.getOutOfMemoryError();
         //main.getStackOverflowError(1);
 
     }
